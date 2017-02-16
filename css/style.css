@@ -13,17 +13,25 @@ table {
     cursor: crosshair;;
 }
 
-img {
-    animation-name: example;
+
+/*.pigeons {
+    transition-property: all;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+}*/
+/*img {*/
+    /*animation-name: example;
     animation-duration: 20s;
-    animation-iteration-count: infinite;
+    animation-iteration-count: infinite;*/
+    /*transition-property: all;
+    transition-duration: 2s;
+    transition-timing-function: linear;*/
+/*}*/
 
-}
-
-@keyframes example {
+/*@keyframes example {
     0%   {left:0px; top:0px;}
     25%  {left:1301px; top:0px;}
     50%  {left:1301px; top:641px;}
     75%  {left:0px; top:641px;}
     100% {left:0px; top:0px;}
-}
+}*/
