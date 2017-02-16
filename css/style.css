@@ -1,0 +1,10 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#cadre {
+    width: 100vw;
+    height: 100vh ;
+    border: solid 20px grey;
+}
