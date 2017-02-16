@@ -5,10 +5,37 @@
         <meta charset="utf-8">
         <title>tir au pigeon</title>
     </head>
-    <body onload="genCadre">
+    <body id="body">
         <table id="cadre"></table>
+
     </body>
     <script type="text/javascript">
+    var bodyElement = document.getElementById("body");
+    var cadreElement = document.getElementById("cadre");
+
+    var xpositionInitial = Math.floor(cadreElement.offsetWidth*Math.random())+"px";
+    var ypositionInitial = Math.floor(cadreElement.offsetHeight*Math.random())+"px";
+
+    var xposition = Math.floor(cadreElement.offsetWidth*Math.random())+"px";
+    var yposition = Math.floor(cadreElement.offsetWidth*Math.random())+"px";
+    pigeon.style.transition = "all 5s"
+
+
+    var pigeon = document.createElement("img");
+    pigeon.src = "./Images/Bunny_3.png";
+    pigeon.style.width = "5%";
+    pigeon.style.heignt = "5%";
+    pigeon.style.position = "absolute";
+    pigeon.style.left = xpositionInitial;
+    pigeon.style.top = ypositionInitial;
+    cadreElement.appendChild(pigeon);
+
+    console.log(cadreElement.offsetHeight);
+
+
+    pigeon.addEventListener("mousedown", function () {
+        pigeon.style.display = "none";
+    })
 
     </script>
 </html>

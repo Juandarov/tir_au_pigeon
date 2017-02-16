@@ -8,3 +8,22 @@ body {
     height: 100vh ;
     border: solid 20px grey;
 }
+
+table {
+    cursor: crosshair;;
+}
+
+img {
+    animation-name: example;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes example {
+    0%   {left:0px; top:0px;}
+    25%  {left:1301px; top:0px;}
+    50%  {left:1301px; top:641px;}
+    75%  {left:0px; top:641px;}
+    100% {left:0px; top:0px;}
+}
