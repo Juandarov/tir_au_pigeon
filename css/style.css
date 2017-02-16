@@ -7,10 +7,13 @@ body {
     width: 100vw;
     height: 100vh ;
     border: solid 20px grey;
+    background-image: url('../Images/HORtrEA-space-back-grounds.jpg');
+    background-size: cover;
 }
 
 table {
-    cursor: crosshair;;
+    cursor: crosshair;
+    /*cursor: url(../Images/Bunny_3.png), auto;*/
 }
 
 

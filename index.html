@@ -10,34 +10,39 @@
 
     </body>
     <script type="text/javascript">
-    var bodyElement = document.getElementById("body");
     var cadreElement = document.getElementById("cadre");
-
-
     var intervalId = null;
-    var pigeon = document.createElement("img");
-    cadreElement.appendChild(pigeon);
 
-    function mouvement () {
-        var xposition = Math.floor(cadreElement.offsetWidth*Math.random());
-        var yposition = Math.floor(cadreElement.offsetWidth*Math.random());
-        var ypositionInitial = Math.floor(cadreElement.offsetHeight*Math.random());
-        var xpositionInitial = Math.floor(cadreElement.offsetWidth*Math.random());
-        // document.getElementsByClassName("pigeons").style.transition = "all 2s";
+    for(i = 0; i < 5; i++){
+        var pigeon = document.createElement("img");
         pigeon.className = "pigeons";
         pigeon.src = "./Images/Bunny_3.png";
         pigeon.style.width = "5%";
         pigeon.style.heignt = "5%";
         pigeon.style.position = "absolute";
-        pigeon.style.transitionProperty = "all";
-        pigeon.style.transitionDuration = "2s";
-        pigeon.style.transitionTimingFunction = "linear";
-        pigeon.style.left = xpositionInitial+"px";
-        pigeon.style.top = ypositionInitial+"px";
-        pigeon.addEventListener("mousedown", function () {
-            pigeon.style.display = "none";
-        })
+        cadreElement.appendChild(pigeon);
+    };
+    function mouvement () {
+        for(j = 0; j < 5; j++){
+            // var xposition = Math.floor(cadreElement.offsetWidth*Math.random());
+            // var yposition = Math.floor(cadreElement.offsetWidth*Math.random());
+            var ypositionInitial = Math.floor(cadreElement.offsetHeight*Math.random());
+            var xpositionInitial = Math.floor(cadreElement.offsetWidth*Math.random());
+            var tousPigeons = document.getElementsByClassName('pigeons');
+            tousPigeons[j].style.left = xpositionInitial+"px";
+            tousPigeons[j].style.top = ypositionInitial+"px";
+            tousPigeons[j].style.transitionProperty = "all";
+            tousPigeons[j].style.transitionDuration = "1s";
+            tousPigeons[j].style.transitionTimingFunction = "linear";
+            tousPigeons[j].addEventListener("mousedown", function () {
+                this.style.display = "none";
+            })
+        }
+
     }
+
+
+
     intervalId = setInterval(mouvement, 1000);
 
 
